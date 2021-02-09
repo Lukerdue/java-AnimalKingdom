@@ -1,7 +1,23 @@
 package animalApp;
+import java.util.List;
+import java.util.ArrayList;
+
 
 public class Main
 {
+    private static List<Animal> filterAnimals(List<Animal> theList, testAnimal tester)
+    {
+        List<Animal> tempList = new ArrayList<>();
+
+        for(Animal v : theList)
+        {
+            if(tester.test(v))
+            {
+                tempList.add(v);
+            }
+        }
+        return tempList;
+    }
     private static void workWithData()
     {
         System.out.println("Welcome to Lambda Animal Kingdom!!");
@@ -26,6 +42,25 @@ public class Main
         Fish salmon = new Fish("Salmon", 1758);
         Fish catfish = new Fish("Catfish", 1817);
         Fish perch = new Fish("Perch", 1758);
+
+        List<Animal> animalList = new ArrayList<>();
+        animalList.add(panda);
+        animalList.add(zebra);
+        animalList.add(koala);
+        animalList.add(sloth);
+        animalList.add(armadillo);
+        animalList.add(racoon);
+        animalList.add(bigfoot);
+        animalList.add(pigeon);
+        animalList.add(peacock);
+        animalList.add(toucan);
+        animalList.add(parrot);
+        animalList.add(swan);
+        animalList.add(salmon);
+        animalList.add(catfish);
+        animalList.add(perch);
+
+        System.out.println(animalList);
     }
     public static void main(String[] args)
     {
