@@ -8,26 +8,26 @@ public class Bird extends Animal
     }
 
     @Override
-    public String move(int distance)
+    public String move()
     {
-        return getName() + " flies "+ distance + " feet!";
+        return "Flies!";
     }
 
     @Override
     public String breathe()
     {
-        return getName() + " breathes with their lungs!";
+        return "Lungs!";
     }
 
     @Override
     public String reproduce()
     {
-        return getName() + " laid an egg!";
+        return "Eggs!";
     }
 
     @Override
     public String toString()
     {
-        return "Birdie---\nName: " + getName() + "\nYear: "+ getYear() + "\nhas " + getFood() + " food!\n";
+        return "Birdie---\n" + getName() + "\n"+ getYear() + "\n" + move() + "\n "+reproduce()+"\n"+breathe();
     }
 }

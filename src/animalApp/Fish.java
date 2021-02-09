@@ -8,26 +8,26 @@ public class Fish extends Animal
     }
 
     @Override
-    public String move(int distance)
+    public String move()
     {
-        return super.getName() + " swam " + distance + " feet up the river!";
+        return "Swims!";
     }
 
     @Override
     public String breathe()
     {
-        return super.getName() + " breathes through its gills!";
+        return "Gills!";
     }
 
     @Override
     public String reproduce()
     {
-        return super.getName() + " had eggs under water!";
+        return "Eggs!";
     }
 
     @Override
     public String toString()
     {
-        return "Fishy Fishy-----\nName: " + getName() + "\nYear named: " + getYear() + "\nhas " + getFood() + " food!\n";
+        return "Fishy Fishy-----\n" + getName() + "\n" + getYear() + "\n" + move() + "\n"+reproduce()+"\n"+breathe();
     }
 }

@@ -1,7 +1,6 @@
 package animalApp;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Collections;
 
 
 public class Main
@@ -62,8 +61,34 @@ public class Main
         animalList.add(perch);
 
         animalList.sort((a1, a2)->a1.getYear()-a2.getYear());
-        System.out.println("Animals sorted by year----");
+        System.out.println("Animals sorted by year----\n");
         animalList.forEach(a->System.out.println(a));
+
+        System.out.println("\n\nAnimal sorted Alphabetically-----\n");
+        animalList.sort((a1, a2)->a1.getName().compareToIgnoreCase(a2.getName()));
+        animalList.forEach(a-> System.out.println(a));
+
+        System.out.println("\n\nAnimals sorted by how the move!----");
+        animalList.sort((a1, a2)->a1.move().compareToIgnoreCase(a2.move()));
+        animalList.forEach(a->System.out.println(a));
+
+        System.out.println("\n\nAnimals that only have lungs---");
+        List<Animal> filteredAnimals = filterAnimals(animalList, (a)-> a.breathe()=="Lungs!");
+        filteredAnimals.forEach(a->System.out.println(a));
+
+        System.out.println("\n\nAnimals only with lungs, and named in 1758---");
+        filteredAnimals = filterAnimals(animalList, (a)->(a.breathe()=="Lungs!")&&(a.getYear()==1758));
+        filteredAnimals.forEach(a-> System.out.println(a));
+
+        System.out.println("\n\nAnimals with lungs that lay eggs----");
+        filteredAnimals = filterAnimals(animalList, (a)->(a.breathe()=="Lungs!")&&(a.reproduce()=="Eggs!"));
+        filteredAnimals.forEach(a-> System.out.println(a));
+
+        System.out.println("\n\nAnimals named in 1758 alphabetically----");
+        filteredAnimals = filterAnimals(animalList, a->a.getYear()==1758);
+        filteredAnimals.sort((a1, a2)->a1.getName().compareToIgnoreCase(a2.getName()));
+        filteredAnimals.forEach(a-> System.out.println(a));
+        
     }
     public static void main(String[] args)
     {

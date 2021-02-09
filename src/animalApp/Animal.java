@@ -15,7 +15,7 @@ public abstract class Animal {
         this.name = name;
     }
 
-    abstract String move(int distance);
+    abstract String move();
     abstract String breathe();
     abstract String reproduce();
 
