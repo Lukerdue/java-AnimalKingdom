@@ -88,6 +88,13 @@ public class Main
         filteredAnimals = filterAnimals(animalList, a->a.getYear()==1758);
         filteredAnimals.sort((a1, a2)->a1.getName().compareToIgnoreCase(a2.getName()));
         filteredAnimals.forEach(a-> System.out.println(a));
+
+        //-----------Stretch-----------------------
+        System.out.println("\n\n---stretch--\nAnimals that are mammals, aphabetically");
+        filteredAnimals = filterAnimals(animalList, a->(a instanceof Mammal));
+        filteredAnimals.sort((a1, a2)->a1.getName().compareToIgnoreCase(a2.getName()));
+        filteredAnimals.forEach(a-> System.out.println(a));
+        
         
     }
     public static void main(String[] args)
