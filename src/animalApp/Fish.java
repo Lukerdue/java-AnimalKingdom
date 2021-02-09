@@ -28,6 +28,6 @@ public class Fish extends Animal
     @Override
     public String toString()
     {
-        return "Fishy Fishy-----\nName: " + getName() + "\nYear named: " + getYear() + "\nhas " + getFood() + " food!";
+        return "Fishy Fishy-----\nName: " + getName() + "\nYear named: " + getYear() + "\nhas " + getFood() + " food!\n";
     }
 }

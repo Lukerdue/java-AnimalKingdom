@@ -28,6 +28,6 @@ public class Mammal extends Animal
     @Override
     public String toString()
     {
-        return "Mammalian---\nName: " + getName() + "\nYear: "+ getYear() + "\n has " + getFood() + " food";
+        return "Mammalian---\nName: " + getName() + "\nYear: "+ getYear() + "\nhas " + getFood() + " food!\n";
     }
 }

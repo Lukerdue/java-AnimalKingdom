@@ -1,6 +1,7 @@
 package animalApp;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collections;
 
 
 public class Main
@@ -20,7 +21,7 @@ public class Main
     }
     private static void workWithData()
     {
-        System.out.println("Welcome to Lambda Animal Kingdom!!");
+        System.out.println("Welcome to Lambda Animal Kingdom!!\n\n");
 
         //mammals
         Mammal panda = new Mammal(1869, "Panda");
@@ -60,7 +61,9 @@ public class Main
         animalList.add(catfish);
         animalList.add(perch);
 
-        System.out.println(animalList);
+        animalList.sort((a1, a2)->a1.getYear()-a2.getYear());
+        System.out.println("Animals sorted by year----");
+        animalList.forEach(a->System.out.println(a));
     }
     public static void main(String[] args)
     {

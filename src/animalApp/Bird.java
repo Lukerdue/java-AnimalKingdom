@@ -28,6 +28,6 @@ public class Bird extends Animal
     @Override
     public String toString()
     {
-        return "Birdie---\nName: " + getName() + "\nYear: "+ getYear() + "\n has " + getFood() + " food";
+        return "Birdie---\nName: " + getName() + "\nYear: "+ getYear() + "\nhas " + getFood() + " food!\n";
     }
 }
